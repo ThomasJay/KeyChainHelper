@@ -2,18 +2,22 @@
 iOS KeyChain Helper - iOS 8 / Object-C. Simple class to help Insert, Update, Retrieve and Delete items from the KeyChain
 
 Initialize the Helper, give it something unique like your bundle id
+
 [KeyChainHelper initWithServiceName:@"com.tomjay.test"];
 
 Save Some Data
+
 NSData* value = [@"secret stuff2" dataUsingEncoding:NSUTF8StringEncoding];
 [[KeyChainHelper sharedKeyChainHelper] setKeyChainDataValueForAttribute:@"testitem2" value:value];
 
 Save and Update is the same call
 
 Get Data from KeyChain
+
  NSData *retValue = [[KeyChainHelper sharedKeyChainHelper] keyChainDataValueForAttribute:@"testitem2"];
 
 Delete Item from KeyChain
+
 [[KeyChainHelper sharedKeyChainHelper] keyChainDeleteValueForAttribute:@"testitem"];
 
 
