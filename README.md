@@ -30,25 +30,23 @@ NSData* value = [@"secret stuff2" dataUsingEncoding:NSUTF8StringEncoding];
 
 
 
-**API**
-
-Get Singleton of KeyChainHelper
+API
 --------------
+
+**Get Singleton of KeyChainHelper**
 
 *+(KeyChainHelper *) sharedKeyChainHelper;*
 
 
 
- Init KeyChainHelper - pass in service name (com.tomjay.test) - something like your bundle id that is unique to your app
---------------
+**Init KeyChainHelper - pass in service name (com.tomjay.test) - something like your bundle id that is unique to your app**
 
 *+(void) initWithServiceName:(NSString*) serviceName;*
 
 
 
 
-Store or Update a Value in KeyChain
---------------
+**Store or Update a Value in KeyChain**
 
 *-(BOOL) setKeyChainDataValueForAttribute:(NSString*) attribute value:(NSData*)value;*
 
@@ -57,8 +55,7 @@ Store or Update a Value in KeyChain
 
 
 
-Get a Value from KeyChain
---------------
+**Get a Value from KeyChain**
 
 *-(NSData*) keyChainDataValueForAttribute:(NSString*) attribute;*
 
@@ -67,8 +64,7 @@ Get a Value from KeyChain
 
 
 
-Delete item from KeyChain
---------------
+**Delete item from KeyChain**
 
 *-(void) keyChainDeleteValueForAttribute:(NSString*) attribute;*
 
